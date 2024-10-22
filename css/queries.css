@@ -1,0 +1,221 @@
+@media (max-width: 98em) {
+  .WhatGit,
+  .diff,
+  .gitRepos,
+  .basicCommand,
+  .difference {
+    max-width: 120rem;
+  }
+  ul {
+    padding-right: 0rem;
+  }
+  .command {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .span,
+  .span2,
+  .span22 {
+    grid-column: 1 / -1;
+  }
+  p {
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .git,
+  .github {
+    padding: 0;
+    /* background-color: palegoldenrod; */
+  }
+  .diff,
+  .gitRepos,
+  .basicCommand,
+  .difference {
+    max-width: 95rem;
+  }
+}
+@media (max-width: 70em) {
+  .command {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 3rem 3rem;
+  }
+  .head {
+    padding: 0rem 6rem;
+  }
+  .gitRepos {
+    max-width: 80rem;
+  }
+}
+@media (max-width: 60em) {
+  .head {
+    font-size: 1.8rem;
+    padding: 0;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  p,
+  li {
+    font-size: 2rem;
+  }
+  .difference h1 {
+    font-size: 4rem;
+  }
+  .head {
+    padding: 0rem 6rem;
+  }
+  .coreEditLinkPara {
+    font-size: 1.8rem;
+    padding-right: 0;
+  }
+  .gitRepos {
+    max-width: 65rem;
+  }
+}
+@media (max-width: 55em) {
+  div.difference {
+    display: flex;
+    flex-direction: column;
+    padding-left: 9rem;
+  }
+  p {
+    padding: 0;
+  }
+  .head {
+    padding: 0;
+  }
+  h2.head.basic {
+    padding: 0rem 6rem;
+  }
+  .first_sec {
+    margin: 0 auto;
+    padding-left: 10rem;
+  }
+  .confiGit {
+    padding-top: 3rem;
+    padding-left: 8rem;
+  }
+  .gitbash,
+  .basicCommands {
+    padding-left: 10rem;
+  }
+  .gitRepos {
+    max-width: 55rem;
+  }
+  ol {
+    padding-right: 0rem;
+  }
+  .para.mb {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .diff,
+  .basicCommand,
+  .difference {
+    max-width: 65rem;
+  }
+  .gitRepos {
+    max-width: 50rem;
+  }
+  ol {
+    padding-right: 0;
+  }
+}
+
+/* /////////////////////////// */
+@media (max-width: 48em) {
+  .link header {
+    background-color: #cbcbff74;
+  }
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    right: 5rem;
+    top: 3rem;
+    background-color: #cbcbfffe;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.235);
+  }
+  .link header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
+  .link.nav-open header {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .WhatGit,
+  .diff,
+  .gitRepos,
+  .basicCommand,
+  .difference {
+    max-width: 120rem;
+  }
+  .formatting {
+    display: block;
+  }
+  .gitbash,
+  .basicCommands,
+  .first_sec,
+  div.difference,
+  .confiGit {
+    padding-left: 0rem;
+  }
+  .command {
+    padding: 3rem 3rem;
+  }
+  .basicCommands {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 28em) {
+  .basicCommands p,
+  .basicCommands span {
+    font-size: 5px;
+  }
+  .command div {
+    border-bottom: 2px solid #ccc;
+    border-left: none;
+    border-right: none;
+
+    gap: 1rem;
+    padding: 0.9rem;
+    width: 35rem;
+  }
+  span {
+    display: flex;
+    align-self: self-start;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="git and github free web tutorials" />
+    <meta name="keywords" content="Git and Github Short Notes" />
+    <meta name="author" content="Tamanna Murad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  for browser support favicon -->
+    <link rel="icon" href="img/favicon/github-logo.png" />
+    <!--  for apple.ios support favicon -->
+    <link rel="apple-touch-icon" href="img/favicon/github-logo.png" />
+    <!--  for android support favicon -->
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script defer src="./script/script.js"></script>
+    <title>git and github free web tutorials</title>
+  </head>
+  <body>
+    <div class="formatting">
+      <div class="link">
+        <header>
+          <nav class="main-nav">
+            <a href="#WhatGit">&SmallCircle; What is Git</a>
+            <a href="#diff">&SmallCircle; Git vs Github</a>
+            <a href="#configGit">&SmallCircle; Configuring Git</a>
+            <a href="#basicCommands">&SmallCircle; Basic Commands</a>
+            <a href="#repo">&SmallCircle; Git repositories</a>
+            <a href="#branch">&SmallCircle; Git Branches</a>
+            <a href="#gitDiff">&SmallCircle; Git Diff</a>
+            <a href="#gitStash">&SmallCircle; Git Stash</a>
+            <a href="#checkout">&SmallCircle; Checkout</a>
+            <a href="#discardingChanges">&SmallCircle; Discarding changes</a>
+            <a href="#clone">&SmallCircle;Cloning</a>
+            <a href="#tags">&SmallCircle;Git Tags</a>
+            <a href="#GitObjects">&SmallCircle;Git Objects</a>
+            <a href="#reflogs">&SmallCircle;Reflogs</a>
+          </nav>
+        </header>
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </div>
+      <div>
+        <section class="WhatGit" id="WhatGit">
+          <div class="first_sec">
+            <div>
+              <h1>What is Git</h1>
+              <p>
+                Git is
+                <span>
+                  a free, open-source version control system (VCS) that helps
+                  tracks and manages changes to files and projects
+                  overtime.</span
+                >
+                It's considered the modern standard for software development and
+                is used by many teams worldwide.
+              </p>
+            </div>
+
+            <div>
+              <h1>Here are some of Git's features:</h1>
+              <ul>
+                <li>
+                  <span> Distributed:</span> Each developer has their own local
+                  copy of the code repository, including the full history. This
+                  allows for simultaneous development on different branches
+                </li>
+                <li>
+                  <span> Branching:</span> Branches allow for flexible
+                  development and faster releases.
+                </li>
+                <li>
+                  <span> Merging:</span> Git has excellent support for merging
+                  branches into the main version.
+                </li>
+                <li>
+                  <span> Snapshots:</span> Git takes a snapshot of the work
+                  every time a change is committed, comparing it to previous
+                  versions.
+                </li>
+                <li>
+                  <span>Pull requests:</span> A popular tool that allows teams
+                  to review each other's code.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p>
+                <span
+                  >Git was originally developed in 2005 by Linus Torvalds, the
+                  creator of Linux and Git.</span
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="diff" id="diff">
+          <div class="difference">
+            <div class="git">
+              <h1>Git</h1>
+              <ul>
+                <li>
+                  Git is the VCS(version control system) that runs locally on
+                  your machine.
+                </li>
+                <li>you do not need internet connection.</li>
+                <li>you do not need to register and account.</li>
+                <li>
+                  learn more:<a href="https://git-scm.com/doc"
+                    >Git Documentation</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="github">
+              <h1>Github</h1>
+              <ul>
+                <li>
+                  Github is a service that host Git repositories in the cloud
+                  and makes it easier to collaborate with other people.
+                </li>
+                <li>you do need internet connection.</li>
+                <li>you do need to register and account.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="gitbash">
+            <div>
+              <img src="./img/gitbash.png" alt="" />
+              <p>
+                <strong>Git Bash:</strong> is a command line interface , it is
+                default shell for linux and mac.
+              </p>
+            </div>
+          </div>
+
+          <div class="confiGit" id="configGit">
+            <div>
+              <img src="./img/configuring.png" alt="" />
+              <h1 class="head">Configuring Git:</h1>
+            </div>
+            <div>
+              <p class="para">
+                Now that you have Git on your system, you’ll want to do a few
+                things to customize your Git environment. You should have to do
+                these things only once on any given computer; they’ll stick
+                around between upgrades.
+              </p>
+            </div>
+
+            <div class="Identity">
+              <div>
+                <h2 class="head">Your Identity:</h2>
+              </div>
+              <div>
+                <p class="para mb">
+                  The first thing you should do when you install Git is to set
+                  your user name and email address. This is important because
+                  every Git commit uses this information, and it’s immutably
+                  baked into the commits you start creating:
+                </p>
+              </div>
+            </div>
+            <div class="configImg configImgDiv">
+              <picture>
+                <source srcset="./img/codeImg/nameEmailconfig1.png" />
+                <img
+                  src="./img/codeImg/nameEmailconfig.png"
+                  class="configImg"
+                  alt="Configuring Git email and username"
+                />
+              </picture>
+            </div>
+            <div class="coreEditVs">
+              <h2 class="head">
+                git config core.editor commands for Visual Studio Code:
+              </h2>
+            </div>
+            <div class="configImg configImgDiv">
+              <picture>
+                <source srcset="./img/codeImg/coreEditorConfig1.png" />
+                <img
+                  src="./img/codeImg/coreEditorConfig.png"
+                  class="configImg"
+                  alt=" git config core.editor commands for Visual Studio Code"
+                />
+              </picture>
+            </div>
+            <div>
+              <p class="coreEditLinkPara">
+                click on this link for more core.editor commands &rightarrow;
+              </p>
+              <a
+                href="https://git-scm.com/book/ms/v2/Appendix-C:-Git-Commands-Setup-and-Config"
+                class="coreEditLink"
+                >git config core.editor commands</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="basicCommands" id="basicCommands">
+          <h2 class="head basic">Basic Commands:</h2>
+          <div class="command">
+            <div>
+              <p>clear terminal</p>
+              <span>ctrl+l</span>
+            </div>
+            <div>
+              <p>search for command</p>
+              <span>ctrl+r</span>
+            </div>
+            <div>
+              <p>next line</p>
+              <span>ctrl+c</span>
+            </div>
+            <div>
+              <p>close out the whole terminal</p>
+              <span>ctrl+d</span>
+            </div>
+            <div>
+              <p>give me information</p>
+              <span>whoami </span>
+            </div>
+            <div>
+              <p>system current data and time</p>
+              <span> date </span>
+            </div>
+            <div>
+              <p>list directory/</p>
+              <span>ls</span>
+            </div>
+            <div>
+              <p>print working directory/</p>
+              <span>pwd</span>
+            </div>
+            <div>
+              <p>showing hidden directory/files</p>
+              <span>ls -a</span>
+            </div>
+            <div>
+              <p>show long listing directory/files</p>
+              <span>ls -l</span>
+            </div>
+            <div>
+              <p>hidden file+long listing</p>
+              <span>ls -al</span>
+            </div>
+            <div>
+              <p>reverse long listing</p>
+              <span> ls -rl </span>
+            </div>
+            <div>
+              <p>change directory</p>
+              <span> cd </span>
+            </div>
+            <div>
+              <p>top level exit</p>
+              <span> cd .. </span>
+            </div>
+            <div>
+              <p>just last exit</p>
+              <span> cd - </span>
+            </div>
+
+            <div class="span">
+              <p>for windows to open <b>folder</b></p>
+              <span><b>start</b> &nbsp;directoryName </span>
+            </div>
+            <div class="span">
+              <p>for windows to open <b>file</b></p>
+              <span> <b>start</b> &nbsp;fileName </span>
+            </div>
+            <div class="span">
+              <p>for windows to open <b>link</b></p>
+              <span> <b>start</b> &nbsp;www.google.com</span>
+            </div>
+
+            <div class="span">
+              <p>for mac to open <b>folder</b></p>
+              <span> <b>open</b> &nbsp;directoryName </span>
+            </div>
+
+            <div class="span">
+              <p>for mac to open <b>file</b></p>
+              <span> <b>open</b> &nbsp;fileName </span>
+            </div>
+
+            <div class="span">
+              <p>for mac to open <b>link</b></p>
+              <span> <b>open</b> &nbsp;www.google.com</span>
+            </div>
+
+            <div class="span">
+              <p>for linux to open <b>folder</b></p>
+              <span><b>xdg-open</b> &nbsp;directoryName</span>
+            </div>
+
+            <div class="span">
+              <p>for linux to open <b>file</b></p>
+              <span> <b>xdg-open</b> &nbsp;fileName </span>
+            </div>
+
+            <div class="span">
+              <p>for linux to open <b>link</b></p>
+              <span> <b>xdg-open</b> &nbsp;www.google.com</span>
+            </div>
+
+            <div class="span2">
+              <p>make directory</p>
+              <span><b>mkdir</b> &nbsp;directoryName</span>
+            </div>
+            <div>
+              <p class="smfs">
+                In GUI sense called folder <br />In CLI sense called directory
+              </p>
+            </div>
+            <div class="span">
+              <p>
+                remove directory
+                <strong
+                  >(if you want to delete a folder , you have to go out of the
+                  folder then delete it.)</strong
+                >
+              </p>
+              <span><b>rm -r</b> &nbsp;directoryName</span>
+            </div>
+            <div class="span">
+              <p>
+                if a directory have a file/sub-folder in it and want to remove
+                directory then use(recursive-force)
+              </p>
+              <span><b>rm -rf</b> &nbsp;directoryName</span>
+            </div>
+            <div class="span2">
+              <p>create one file</p>
+              <span><b>touch</b> &nbsp; fileName.extension</span>
+            </div>
+            <div class="span">
+              <p>create one or more than one file</p>
+              <span
+                ><b>touch</b> &nbsp; fileName.extension &nbsp;
+                fileName.extension</span
+              >
+            </div>
+            <div>
+              <p>remove file</p>
+              <span><b>rm</b>&nbsp; fileName.extension</span>
+            </div>
+            <div class="span22">
+              <p>asking me do you want to delete/remove file</p>
+              <span><b>rm -i</b>&nbsp; fileName.extension</span>
+            </div>
+            <div class="span">
+              <p>
+                if you want to <b>copy</b> a file from one location to another
+                location.
+              </p>
+              <span><b>cp</b>&nbsp; fileName.extension directoryName</span>
+            </div>
+            <div class="span configImg bg">
+              <picture>
+                <source srcset="./img/codeImg/copyCmd1.png" />
+                <img
+                  src="./img/codeImg/copyCmd.png"
+                  class="configImg"
+                  alt="copy file from one location to another location"
+                />
+              </picture>
+            </div>
+            <div class="span">
+              <p>
+                if you want to <b>Move</b> a file from one location to another
+                location.
+              </p>
+              <span><b>mv</b>&nbsp; fileName.extension directoryName</span>
+            </div>
+            <div class="span configImg bg">
+              <picture>
+                <source srcset="./img/codeImg/moveF1.png" />
+                <img
+                  src="./img/codeImg/moveF.png"
+                  class="configImg"
+                  alt="move file from one location to another location"
+                />
+              </picture>
+            </div>
+
+            <div class="span">
+              <p>if you want to <b>rename a file</b></p>
+              <span>
+                <b>mv</b>&nbsp; OldFileName.extension
+                NewFileName.extension</span
+              >
+            </div>
+            <div class="span">
+              <p>if you want to <b>rename a directory</b></p>
+              <span><b>mv</b>&nbsp; OldFolderName NewFolderName </span>
+            </div>
+            <div class="span configImg bg">
+              <picture>
+                <source srcset="./img/codeImg/renameff1.png" />
+                <img
+                  src="./img/codeImg/renameff.png"
+                  class="configImg"
+                  alt="rename file and folder"
+                />
+              </picture>
+            </div>
+            <div class="span">
+              <p>We can write at the terminal</p>
+              <span><b>cat ></b>&nbsp; FileName.extension</span>
+            </div>
+            <div class="span">
+              <p>we can see the content inside's file</p>
+              <span><b>cat </b>&nbsp; FileName.extension</span>
+            </div>
+            <div class="span configImg bg">
+              <picture>
+                <source srcset="./img/codeImg/catCmd1.png" />
+                <img
+                  src="./img/codeImg/catCmd.png"
+                  class="configImg"
+                  alt="cat command "
+                />
+              </picture>
+            </div>
+            <div class="span">
+              <p>search a words</p>
+              <span><b>grep "searchWord" </b> &nbsp; FileName</span>
+            </div>
+            <div class="span configImg bg">
+              <picture>
+                <source srcset="./img/codeImg/grep1.png" />
+                <img
+                  src="./img/codeImg/grep.png"
+                  class="configImg"
+                  alt="grep command "
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="repo">
+          <div class="gitRepo">
+            <div>
+              <p><strong>What is Git repo (repositories)?</strong></p>
+              <p class="para">
+                Git repo is a workspace which tracks and manages files within a
+                folder.
+              </p>
+            </div>
+            <div>
+              <p><strong>What is Git status ?</strong></p>
+              <p class="para">
+                Git status gives information on the current status of a git
+                repository and its contents.
+              </p>
+            </div>
+            <div>
+              <p><strong>What is Git init ?</strong></p>
+              <p class="para">
+                Git tracks a directory and all nested sub directories , Do not
+                init a repo inside of a repo , before running git init , use git
+                status to verify that you are not currently inside of a repo.
+                <span>git init (only one time use for one project).</span>
+              </p>
+            </div>
+            <div>
+              <p><strong>What is Git commit ?</strong></p>
+              <p class="para">
+                It is like a snapshot or checkpoints of all changes in the
+                working directory.
+              </p>
+            </div>
+            <div>
+              <p><strong>What is Git work flow ?</strong></p>
+              <div class="configImg">
+                <picture>
+                  <source srcset="./img/codeImg/workFlow1.png" />
+                  <img
+                    src="./img/codeImg/workFlow.png"
+                    class="configImg"
+                    alt="git workflow"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div>
+              <p>
+                <strong>Git commit </strong>
+              </p>
+              <p class="para">
+                <span>git commit</span> will commit all staged changes it also
+                opens up a text editor and prompts you for a commit message. (
+                usually commit message is Present Imperative Tense)
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>git commit -m "here typing a message" </strong>
+              </p>
+              <p class="para">
+                <span>git commit -m "here typing a message"</span>
+                -m flag allow us to pass in an inline commit message, rather
+                than launching a text editor.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>git log </strong>
+              </p>
+              <p class="para">
+                <span>git log</span> gives the information about the author ,
+                date , commit message.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>git log --abbrev-commit </strong>
+              </p>
+              <p class="para">
+                <span>git log --abbrev-commit</span> instead of showing the full
+                40-byte hexadecimal commit , this will show only a prefix.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>git log --oneline </strong>
+              </p>
+              <p class="para">
+                <span>git log --oneline</span> print a single commit in a single
+                line as output.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>git add . </strong>
+              </p>
+              <p class="para">
+                <span>git add .</span> to stage all changes at once.
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>Amending commits </strong>
+              </p>
+              <p class="para">
+                Suppose you just made a commit and realized you forget to
+                include a file or want to edit commit message then we use
+                --amend <span>git commit --amend</span> (you can redo the
+                previous commit and edit previous commit using the --amend)
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong>Ignoring files </strong>
+              </p>
+              <ul class="para">
+                <li>
+                  using <span>.gitignore</span> file to ignore the files and
+                  directories such as api keys, secretes , credentials ,
+                  os(.DS_Store), Dependencies and packages.
+                </li>
+
+                <li>
+                  (never use
+                  <span>git add .</span>
+                  for those files that you want to ignore , always keep untrack
+                  for ignoring file,folder)
+                </li>
+                <li>
+                  <a href="https://www.toptal.com/developers/gitignore/">
+                    <span>gitignore.io website</span></a
+                  >
+                  that recommend which file to ignore and what to ignore.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p><strong>Short Demo of git commands: </strong></p>
+              <div class="configImg configImgDiv">
+                <picture>
+                  <source srcset="./img/codeImg/gitDemo1.png" />
+                  <img
+                    srcset="./img/codeImg/gitDemo.png"
+                    class="configImg"
+                    alt="Demo of git commands"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div>
+              <p><strong>Demo of gitignore: </strong></p>
+              <div class="configImg">
+                <picture>
+                  <source srcset="./img/codeImg/demoGitignore1.png" />
+                  <img
+                    src="./img/codeImg/demoGitignore.png"
+                    class="configImg"
+                    alt="Demo of gitignore"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="branch">
+          <div>
+            <p>
+              <strong>Branches: </strong>
+            </p>
+            <p class="para">
+              Master branch is just default name ,it's just like any other
+              branch. In 2020 Github renamed default branch to main branch. But
+              the default Git branch name is still master branch. If we make
+              changes on one branch , they do not impact the other
+              branches(unless we merge the changes.)
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>git branch </strong>
+            </p>
+            <p class="para">
+              <span>git branch</span> to view all the existing branches.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong> git branch BranchName </strong>
+            </p>
+            <p class="para">
+              <span> git branch BranchName</span>
+              to make a new branch/(creating a new branch) based upon the
+              current HEAD.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>
+                git switch BranchName || git checkout BranchName
+              </strong>
+            </p>
+            <p class="para">
+              <span> git switch BranchName</span>
+              <strong>OR</strong>
+              <span> git checkout BranchName</span>
+              switch to the another branch.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong> Create and switch branch at the same time </strong>
+            </p>
+            <p class="para">
+              <span> git switch -c BranchName</span>
+              <strong>OR</strong>
+              <span> git checkout -b BranchName</span>
+              I want to Creating and switching branch at the same time
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong> Deleting a branch </strong>
+            </p>
+            <p class="para">
+              <span> git branch -D BranchName</span>
+              When we delete branch we had to go anywhere else in branch.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong> Renaming a branch </strong>
+            </p>
+            <p class="para">
+              <span> git branch -m BranchName</span>
+              When we rename branch we have to be on the branch.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong> Merging branch </strong>
+            </p>
+            <ul class="para">
+              <li>
+                If you want to add or merge one branch to another then we use
+                <span> git merge BranchName</span>
+              </li>
+              <li>
+                Suppose I want to merge branchOne to branchTwo first switch or
+                checkout to the branchOne then merge branchTwo.
+              </li>
+              <li>We always merge to the current HEAD branch.</li>
+              <ol class="para" type="I">
+                <strong>There are three types of merging:</strong>
+                <li>Fast forward merger.</li>
+                <li>Automatic merger conflict resolve by git.</li>
+                <li>Merger conflict resolve by (you)Programmer.</li>
+              </ol>
+            </ul>
+          </div>
+          <div>
+            <p><strong>Demo of branch: </strong></p>
+            <div class="configImg configImgDiv">
+              <picture>
+                <source srcset="./img/codeImg/branchDemo1.png" />
+                <img
+                  src="./img/codeImg/branchDemo.png"
+                  class="configImg"
+                  alt="Demo of branch"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="gitDiff">
+          <div>
+            <p>
+              <strong>Git Diff: </strong>
+            </p>
+            <p class="para">
+              <span>git diff</span> command to view changes between commits,
+              branches , files, working directory. Git diff lists all the
+              changes in our working directory that are not staged for next
+              commit. (git diff show un-stages changes)
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>git diff HEAD: </strong>
+            </p>
+            <p class="para">
+              <span>git diff HEAD</span> lists all the changes in working tree
+              since your last commit. (git diff HEAD show stage and un-stages
+              changes)
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>git diff --staged or git diff --cached : </strong>
+            </p>
+            <p class="para">
+              <span>git diff --staged or git diff --cached </span> lists all the
+              changes between the staging area and our last commit.
+            </p>
+          </div>
+          <div>
+            <p><strong>Demo of git diff: </strong></p>
+            <div class="configImg configImgDiv">
+              <picture>
+                <source srcset="./img/codeImg/diffDemo1.png" />
+                <img
+                  src="./img/codeImg/diffDemo.png"
+                  class="configImg"
+                  alt="Demo of git diff"
+                />
+              </picture>
+            </div>
+          </div>
+
+          <div>
+            <p>
+              <strong
+                >git diff --staged fileName or git diff --cached fileName:
+              </strong>
+            </p>
+            <p class="para">
+              <span
+                >git diff --staged fileName or git diff --cached fileName
+              </span>
+              we can view the changes with a specific file by providing git diff
+              with a file-name.
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>Comparing branches: </strong>
+            </p>
+            <p class="para">
+              <span>git diff branchName1..branchName2 </span>
+              ( example: git diff main..mySecondBranch )
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>Comparing commits: </strong>
+            </p>
+            <p class="para">
+              <span>git diff commitHash..commitHash </span>
+              ( example: git diff caab03b..43244b7)
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>Show unstaged changes for specific file: </strong>
+            </p>
+            <p class="para">
+              <span>git diff HEAD fileName </span>
+              ( example: git diff HEAD index.html )
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>A short note: 😄 </strong>
+            </p>
+            <ul>
+              <li>git diff (show unstaged changes)</li>
+              <li>git diff HEAD (show staged and unstaged changes)</li>
+              <li>
+                git diff branch1..branch2 (compare changes between branches)
+              </li>
+              <li>
+                git diff 2300123..3csd100 (compare changes between commits)
+              </li>
+              <li>git diff --staged (show staged changes )</li>
+              <li>git diff --cached (show staged changes )</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              <strong>I want to see changes for only on one file </strong>
+            </p>
+            <ul>
+              <li>git diff fileName (show unstaged changes)</li>
+              <li>git diff HEAD fileName (show staged and unstaged changes)</li>
+              <li>
+                git diff branch1..branch2 fileName (compare changes between
+                branches)
+              </li>
+              <li>
+                git diff 2300123..3csd100 fileName (compare changes between
+                commits)
+              </li>
+              <li>git diff --staged fileName (show staged changes )</li>
+              <li>git diff --cached fileName (show staged changes )</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="gitStash">
+          <h1>
+            <strong>Git stashing: </strong>
+          </h1>
+          <div class="mb">
+            <p><strong>git stash: </strong></p>
+            <p>
+              <span>git stash</span>
+              for example: we are working on a repository and I'm on the master
+              branch and I make some commits and then I switch over to a new
+              branch I work on new branch and I've some uncommitted work on this
+              new branch and then I need to switch back to master , but I've
+              uncommitted work on new branch so when switch to master there two
+              types of situation create -
+            </p>
+            <ol type="I">
+              <li>my changes come with me to the master branch.</li>
+              <li>
+                Git will not let me switch if it is detects uncommitted
+                potential conflicts on new branch.
+              </li>
+            </ol>
+            <p>
+              So I do not want to those changes comes with me to another branch
+              so I used
+              <span>git stash</span> to pause or save uncommitted changes. and
+              if I want to remove pause or stashed then use
+              <span>git stash pop</span>
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>git stash apply </strong>
+            </p>
+            <p class="para">
+              <span>git stash apply</span>
+              you can apply stashed changes to multiple branches.
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>git stash list </strong>
+            </p>
+            <p class="para">
+              You can add multiple stashes onto the stack of stashes. They will
+              all be stashed in the order you added them. If you want to show
+              multiple stashes so use this command
+              <span>git stash list</span>
+              . If you want to apply single stash use this command
+              <span>git stash apply stash@{n}</span> for example.
+              <span>git stash apply stash@{2}</span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <strong>remove or delete or dropping stashes</strong>
+            </p>
+            <p class="para">
+              apply for one stash:
+              <span>git stash drop @{n}</span>
+              for example.
+              <span>git stash drop stash@{2}</span>. If you want to clear all or
+              delete all stashes then use this command
+              <span>git stash clear</span>
+            </p>
+          </div>
+
+          <div>
+            <p>
+              <strong>A short note: 😄 </strong>
+            </p>
+            <ul>
+              <li>git stash ( to pause or save uncommitted changess)</li>
+              <li>
+                git stash apply (apply stashes changes on to another branch)
+              </li>
+              <li>
+                <ul>
+                  (creating multiple stash)
+                  <li>make changes then git stash</li>
+                  <li>again make changes then git stash</li>
+                  <li>again.. git stash</li>
+                  <li>again.. git stash</li>
+                </ul>
+              </li>
+              <li>git stash list (list all the stashes)</li>
+              <li>
+                git stash apply stash@{n} (where n is the number [apply one
+                stash] )
+              </li>
+              <li>
+                git stash drop stash@{n} (where n is the number [delete one
+                stash] )
+              </li>
+              <li>git stash clear (delete all stashes)</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="checkout">
+          <h1>
+            <strong>Checkout: </strong>
+          </h1>
+          <div class="mb">
+            <p class="para">
+              Historically , we used <span> git checkout branchName</span> to
+              switch branches . This still works, The checkout command does a
+              million additional things such as restore files and undo history.
+            </p>
+            <ul class="para">
+              <li>
+                When I use <span>git checkout commitHash</span> to view previous
+                commit, now I am in <span> Detached HEAD state </span> where I
+                can experiment , make changes and commit them.
+              </li>
+              <li>
+                Usually HEAD is like a pointer points to current branch
+                reference and the branch reference is points to the last commit
+                made on a particular branch.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="configImg">
+              <picture>
+                <source srcset="./img/codeImg/usallyHead1.png" />
+                <img
+                  src="./img/codeImg/usallyHead.png"
+                  class="configImg"
+                  alt="HEAD is like a pointer points to current branch"
+                />
+              </picture>
+            </div>
+          </div>
+          <div>
+            <ul class="para">
+              <li>
+                When we use <span>git checkout commitHash</span> then HEAD
+                points at the commit then we called <span>detached HEAD</span>
+              </li>
+              <div class="configImg">
+                <picture>
+                  <source srcset="./img/codeImg/detacheadHead1.png" />
+                  <img
+                    src="./img/codeImg/detacheadHead.png"
+                    class="configImg"
+                    alt="detached HEAD"
+                  />
+                </picture>
+              </div>
+            </ul>
+          </div>
+          <div>
+            <p>
+              <strong>How to remove detached HEAD:</strong>
+            </p>
+            <ul class="para">
+              <li>
+                Reattached HEAD by using command <span>git switch -</span>
+              </li>
+              <li>or by switching to the another branch</li>
+              <li>
+                or you can also make some changes,those changes commits on new
+                branch , is based upon the HEAD ,now you are in reattached HEAD.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="discardingChanges">
+          <h1>Discarding Changes:</h1>
+          <div>
+            <p>
+              Discard changes from a file, basically to revert back (it's like
+              ctrl+z).
+            </p>
+            <p>There are many ways to discard changes:</p>
+          </div>
+          <ul class="para">
+            <li><span>git checkout HEAD fileName</span></li>
+            <li><span>git checkout &nbsp; -- &nbsp; fileName</span></li>
+            <li><span>git restore fileName</span></li>
+          </ul>
+          <div>
+            <p><strong>Unstaging changes: </strong></p>
+            <p class="para">
+              Unstaging changes with git restore . If you have accidentally
+              added a file to staging area with git add and you do not want to
+              include it in the next commit , you can use
+              <span> git restore --staged fileName</span>to remove it from
+              staging area.
+            </p>
+          </div>
+
+          <div>
+            <p><strong>Git reset: </strong></p>
+            <p class="para">
+              Suppose you have made a couple of commits on the master branch,
+              but you actually meant to make them on a separate branch instead ,
+              To undo those commits , you can use git reset.
+              <span> git reset commitHash</span> will reset the repo back to a
+              specific commit . The commits are gone. (it delete commit , but
+              not content of file).
+            </p>
+          </div>
+
+          <div>
+            <p><strong>Git hard: </strong></p>
+            <p class="para">
+              <span> git reset --hard commitHash</span> Its delete commit as
+              well as associated content of file.
+            </p>
+          </div>
+
+          <div>
+            <p><strong>Git revert: </strong></p>
+            <p class="para">
+              <span> git revert commitHash</span> Git revert creates a brand new
+              commit which reverse or undo the changes from a commit because it
+              results in a new commit , you will be prompted to enter a commit
+              message.
+            </p>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="clone">
+          <h1>Cloning:</h1>
+          <p class="para">
+            we can clone a remote repositories hosted on github, All we need is
+            a URL that we can tell Git to clone for us. It basically downloads
+            the content of a repository based upon URL.
+            <strong
+              >Make sure you are not inside of a repo when you clone.</strong
+            >
+          </p>
+          <ul class="para">
+            <li>
+              To clone a repo simply run <span>git clone url</span> git will
+              retrieve all the files associated with the repository and will
+              copy them to your local machine.
+            </li>
+            <li>you can clone non-github repos</li>
+          </ul>
+          <div>
+            <p><strong>Demo of git clone: </strong></p>
+            <div class="configImg">
+              <picture>
+                <source srcset="./img/codeImg/clone1.png" />
+                <img
+                  src="./img/codeImg/clone.png"
+                  class="configImg"
+                  alt="To clone a repo"
+                />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="gitRepos" id="tags">
+          <h1>Git tags:</h1>
+          <p class="para">
+            Tags are pointers that refer to particular points in Git history. We
+            can mark a particular moment in time with a tag.
+            <strong
+              >Tags are most often used to mark version releases in projects
+              (e.g: v4.1.0 , v4.1.1 etc.)</strong
+            >
+            Think of tags as branch references that do not change once a tag is
+            created, it always refers to the same commit . It just a label for a
+            commit.
+          </p>
+          <ul>
+            <p>
+              <strong>Types of Tags: </strong>
+            </p>
+            <ol>
+              <li class="para mb">
+                <strong>lightweight tags:</strong> They are just a name/label
+                that points to a particular commit.
+              </li>
+              <li class="para">
+                <strong>annotated tags:</strong>
+                Store extra meta data including the author's name , email , date
+                , tagging message
+              </li>
+            </ol>
+          </ul>
+          <p>
+            <strong>Sematic versioning: </strong>
+          </p>
+          <p class="para">
+            Consist of three numbers separated by periods(.)
+            <strong>e.g: 2.4.1</strong>
+            .It provides a consistent way for developers to give meaning to
+            their software releases. Give a version number
+            <strong>Major.Minor.Patch</strong>
+          </p>
+          <ul>
+            <ol>
+              <li class="para mb">
+                <strong>Major:</strong> major version when you breaks the API .
+                No longer backwards compatible. <strong>e.g: 3.0.0</strong>
+              </li>
+              <li class="para mb">
+                <strong>Minor:</strong> minor version does not break the API .
+                Add new features or functionality. No breaking changes..
+                <strong>e.g: 3.1.0</strong>
+              </li>
+              <li class="para">
+                <strong>Patch:</strong> patch version when you make backwards
+                compatible bug fixes.. <strong>e.g: 3.1.6</strong>
+              </li>
+            </ol>
+          </ul>
+          <p>
+            <strong>Viewing Tags: </strong>
+          </p>
+          <p class="para">to view existing tags <span>git tag</span></p>
+          <p>
+            <strong>Searching Tags: </strong>
+          </p>
+          <p class="para">
+            to searching tags
+            <span>git tag -l "TagName" | e.g: git tag -l "v13"</span>
+          </p>
+          <p>
+            <strong>Checkout Tags: </strong>
+          </p>
+          <p class="para">
+            To view the state of a repo at a particular tag , we can use
+            <span>git checkout TagName | e.g: git checkout 15.2.1</span> . This
+            puts us in detached HEAD.
+          </p>
+          <p>
+            <strong>Creating lightweight Tags: </strong>
+          </p>
+          <p class="para">
+            Git will create the tag referring to the commit that Head is
+            referencing.
+            <span>git tag TagName | e.g: git tag 1.0.0</span>
+          </p>
+          <p>
+            <strong>Creating annotated Tags: </strong>
+          </p>
+          <p class="para">
+            Use git tag -a create a new annotated tag, Git will then open your
+            default text editor and prompt you for additional information.
+            Similar to git commit , we can also use the -m option to pass a
+            message directly and forgo the opening of the text editor.
+            <span>git tag -a TagName</span>
+          </p>
+          <p>
+            <strong>Tagging previous commits: </strong>
+          </p>
+          <p class="para">
+            We can also tag an older commit by providing the commit hash.
+            <br />
+            <strong
+              >For lightweight tag:
+              <span>git tag TagName commitHash</span></strong
+            >
+            <br />
+            <strong
+              >For annotated tag:
+              <span>git tag -a TagName commitHash</span></strong
+            >
+          </p>
+          <p>
+            <strong>Deleting Tags: </strong>
+          </p>
+          <p class="para">
+            <span>git tag -d TagName</span>
+          </p>
+          <p>
+            <strong>Pushing Tags: </strong>
+          </p>
+          <p class="para">
+            By default , the git push command does not transfer tags to remote
+            servers . If you have a lot of tags that you want to push up at once
+            , you can use the --tags options to the git push command. This will
+            transfer all your tags to the remote server that are not already
+            there.
+            <br />
+            <strong>push all the tags <span>git push --tags</span></strong>
+            <br />
+            <strong
+              >push single tags <span>git push origin tagName</span></strong
+            >
+          </p>
+        </section>
+
+        <section class="gitRepos" id="GitObjects">
+          <h1>Git Objects:</h1>
+          <p class="para">
+            <strong>git blobs: </strong>
+            Git blobs (binary large object) are the object type , Git uses to
+            store the contents of the files in a given repository. Blobs do not
+            even include the filename of each file or an other data. They just
+            store the contents of a file.
+          </p>
+          <p class="para">
+            <strong>git Trees: </strong>
+            Trees are git objects used to store the contents of a directory.
+            Each tree contains pointers that can refer to blobs and to other
+            trees. Each entry in a tree contains the SHA-I hash of a blob or
+            tree, as well as the mode type and file name.
+            <strong>e.g.</strong> <span>git cat-file -p master^{tree}</span>
+            <br />
+            <span>git cat-file -p main^{tree}</span>
+          </p>
+          <div class="configImg">
+            <picture>
+              <source srcset="./img/codeImg/tree1.png" />
+              <img
+                src="./img/codeImg/tree.png"
+                class="configImg"
+                alt="Trees are git objects used to store the contents of a directory."
+              />
+            </picture>
+          </div>
+          <p class="para">
+            <strong>git commits: </strong>
+            Commit objects combine a tree object along with information about
+            the context that led to the current tree. Commits store a reference
+            to parent commits , the author , the committer and the commit
+            message.
+            <strong>e.g.</strong> <span>git cat-file -t commitHash</span>
+            <br />
+            <span>git cat-file -p commitHash</span>
+          </p>
+          <div class="configImg">
+            <picture>
+              <source srcset="./img/codeImg/commitObj1.png" />
+              <img
+                src="./img/codeImg/commitObj.png"
+                class="configImg"
+                alt=" Commit objects"
+              />
+            </picture>
+          </div>
+        </section>
+        <section class="gitRepos" id="reflogs">
+          <h1>Reflogs:</h1>
+          <p class="para">
+            Git keeps a record of when the tips of branches and other references
+            were updated in the repo. We can view and update these reference
+            logs using <strong>the git reflog command</strong>
+          </p>
+          <p class="para">
+            <strong>Limitation of reflog: </strong>
+            Git only keeps reflogs on your local activity . They are not shared
+            with collaborators. Reflogs also expire. Git cleans out old entries
+            after around 90 days, though this can be configured.
+            <strong
+              >git reflog command accepts subcommands shows , expire , delete
+              and exists.</strong
+            >
+            <strong>for example: </strong>
+            to view the logs for the tip of the main branch we could run
+            <span>git &nbsp;reflog &nbsp;show &nbsp; main</span>
+            <strong>|</strong>
+            <span>git &nbsp;reflog &nbsp;show &nbsp;HEAD</span>
+            <br />
+            <span>git &nbsp;reflog &nbsp;show &nbsp;branchName</span>
+            <strong>It show all record and all history.</strong>
+            <br />
+            <span>git &nbsp; reflog &nbsp; show &nbsp;HEAD@{n}</span> (where n
+            is the number).
+          </p>
+          <p class="para">
+            <strong>timed references:</strong>
+            <br />
+            <span>git &nbsp;reflog &nbsp;master@{one.week.ago}</span>
+            <br />
+            <span>git &nbsp;reflog &nbsp;branchName@{2.days.ago}</span>
+            <br />
+            <span>git &nbsp;checkout &nbsp;branchName@{2.days.ago}</span>
+            <br />
+            <span
+              >git &nbsp;diff &nbsp;branchName@{0} &nbsp;
+              branchName{yesterday}</span
+            >
+            <br />
+            <span
+              >git &nbsp;diff &nbsp;branchName@{0} &nbsp;
+              branchName{5.days.ago}</span
+            >
+            <br />
+            Every entry in the reference logs has a timestamp associated with it
+            . We can filter reflogs entries by time/date by using time
+            qualifiers like <br />
+            <strong
+              >1.day.ago <br />
+              3.minutes.ago <br />
+              yesterday <br />
+              1.weeks.ago <br />
+              one.month.ago <br />
+              two.days.ago
+            </strong>
+          </p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
